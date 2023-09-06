@@ -76,24 +76,24 @@ const Product = () => {
 							</p>
 						</div>
 					</div>
-					<div className="flex flex-col align-center justify-center items-center hidden md:block">
+					<div className=" flex-col align-center justify-center items-center hidden md:flex">
 						<div className=" aspect-square h-[24px] w-[24px] rounded-full bg-[#000000]"></div>
 						<div className="h-full w-[2px] bg-[#000000]"></div>
 						<div className="aspect-square h-[24px] w-[24px] rounded-[100px] bg-[#000000]"></div>
 					</div>
 					<div className="md:max-w-[45%] flex flex-col gap-[40px] justify-center">
-						<div>
+						{/* <div>
 							<p>старт</p>
 							<h3 className="lg:text-6xl text-5xl font-bold">17/07/2023</h3>
-						</div>
+	</div> */}
 						<p className="text-3xl">
 							Ровно за 1 месяц превратим вашу идею IT-продукта в готовый
 							работающий проект.
 						</p>
-						<div>
+						{/* <div>
 							<p>финиш</p>
 							<h3 className="lg:text-6xl text-5xl font-bold">17/08/2023</h3>
-						</div>
+						</div> */}
 					</div>
 				</div>
 				<div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between">
