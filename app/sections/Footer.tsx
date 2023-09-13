@@ -1,4 +1,12 @@
 const Footer = () => {
+	const links = [
+		{ text: "Главная", link: "#" },
+		{ text: "О лагере", link: "#camp" },
+		{ text: "Программа", link: "#program" },
+		{ text: "Экспертность", link: "#expert" },
+		{ text: "Стоимость", link: "#price" },
+		{ text: "Вопросы", link: "#faq" },
+	];
 	return (
 		<div className="bg-black p-20 w-full text-white/40 flex justify-between flex-col md:flex-row">
 			<div className="flex flex-col md:flex-row gap-16">
@@ -6,12 +14,16 @@ const Footer = () => {
 					<div className=" md:-rotate-90 md:mt-14">ITMYHUB</div>
 				</div>
 				<ul className="md:-ml-10 mb-4">
-					<li>Главная</li>
-					<li>Услуги</li>
-					<li>Стоимость</li>
-					<li>Экспертиза</li>
-					<li>Кейсы</li>
-					<li>Партнеры</li>
+					{links.map((link) => (
+						<li key={link.text}>
+							<a
+								className="text-gray-400 ease-in-out duration-300 hover:text-gray-600"
+								href={link.link}
+							>
+								{link.text}
+							</a>
+						</li>
+					))}
 				</ul>
 			</div>
 			<div className="flex flex-col justify-between">

@@ -50,7 +50,7 @@ const Popup: React.FC<Popup> = ({ popupControl }) => {
 					<input
 						role="name"
 						className={inputClass}
-						placeholder="Ваше имя"
+						placeholder="Имя"
 						{...register("name", { required: true })}
 					/>
 					{/* errors will return when field validation fails  */}
@@ -59,7 +59,7 @@ const Popup: React.FC<Popup> = ({ popupControl }) => {
 					<input
 						role="email"
 						className={inputClass}
-						placeholder="Ваше email"
+						placeholder="Email"
 						{...register("email", { required: true })}
 					/>
 					{/* errors will return when field validation fails  */}
@@ -68,7 +68,7 @@ const Popup: React.FC<Popup> = ({ popupControl }) => {
 					<input
 						role="phone"
 						className={inputClass}
-						placeholder="Ваше телефон"
+						placeholder="Телефон"
 						{...register("phone", { required: true })}
 					/>
 					{/* errors will return when field validation fails  */}

@@ -50,7 +50,7 @@ const Faq = () => {
 	const openedAccordion = "h-fit opacity-100 scale-10" + accordion;
 	const closedAccordion = "h-1 opacity-0 scale-0" + accordion;
 	return (
-		<div>
+		<div id="faq">
 			<div className="flex flex-col align-center w-full items-center px-4">
 				<h3 className="font-light text-3xl w-full text-left py-4 md:py-8 ">
 					ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ

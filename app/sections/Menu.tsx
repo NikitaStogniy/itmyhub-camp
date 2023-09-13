@@ -2,15 +2,17 @@
 
 import { useState } from "react";
 import Button from "../components/Button";
-
-const Menu = () => {
+interface MenuProps {
+	popupControl: () => void;
+}
+const Menu: React.FC<MenuProps> = ({ popupControl }) => {
 	const links = [
 		{ text: "Главная", link: "#" },
-		{ text: "О лагере", link: "#" },
-		{ text: "Программа", link: "#" },
-		{ text: "Экспертность", link: "#" },
-		{ text: "Стоимость", link: "#" },
-		{ text: "Вопросы", link: "#" },
+		{ text: "О лагере", link: "#camp" },
+		{ text: "Программа", link: "#program" },
+		{ text: "Экспертность", link: "#expert" },
+		{ text: "Стоимость", link: "#price" },
+		{ text: "Вопросы", link: "#faq" },
 	];
 	const [open, setOpen] = useState(Boolean);
 	const handleOpen = () => {
@@ -43,7 +45,11 @@ const Menu = () => {
 						<Button onClick={() => handleOpen()} type={"menu"} label={""} />
 					</div>
 					<div className="hidden lg:block">
-						<Button type={"outline"} label={"Присоединиться"} />
+						<Button
+							onClick={popupControl}
+							type={"outline"}
+							label={"Присоединиться"}
+						/>
 					</div>
 				</div>
 				{open && (

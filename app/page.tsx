@@ -16,21 +16,26 @@ import Popup from "./components/Popup";
 import { useState } from "react";
 
 export default function Home() {
-	const [popupOpen, setPopupOpen] = useState(true);
+	const [popupOpen, setPopupOpen] = useState(false);
 	const handlePopup = () => {
 		setPopupOpen(!popupOpen);
 	};
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between ">
 			{popupOpen ? <Popup popupControl={handlePopup} /> : ""}
-			<Menu />
+			<Menu popupControl={handlePopup} />
 			<Heading popupControl={handlePopup} />
+			<div id="camp" />
 			<Product />
 			<Form />
+			<div id="program" />
 			<Content />
+			<div id="expert" />
 			<About />
+
 			<Projects />
 			<RunningImages />
+			<div id="price" />
 			<Cost popupControl={handlePopup} />
 			<Cta />
 			<Footer />
